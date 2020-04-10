@@ -3,10 +3,14 @@ package com.hugh.java.fun.util
 /**
  * @Author Fly.Hugh
  * @Date 2020/3/25 11:40
- * @Version 1.0
+ * @Version 2.0
  *
  **/
 object PathUtil {
+  def main(args: Array[String]): Unit = {
+    val str: String = pathGet("ARecordofaMortal'sJourneytoImmortality.txt")
+    println(str)
+  }
 
   // relative path
   def pathGet():String = {
@@ -36,7 +40,7 @@ object PathUtil {
     for (j <- 0 to pathArr.length - 1) {
       str = str + pathArr(j) + " "
     }
-    str = str.trim
+    str = "/" + str.trim // 为了适应mac的系统特性 加上了 /
   str
   }
 }

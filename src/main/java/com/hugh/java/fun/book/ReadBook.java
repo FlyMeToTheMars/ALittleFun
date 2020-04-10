@@ -17,29 +17,16 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
 
-public class ReadText {
-
+public class ReadBook {
     public static final int LINELENGTH=100;//自定义行的长度
-//    public static final int pageNum=100；
-
 
     public static void main(String[] args) throws Exception{
-        String a;
-        StringBuffer sb = new StringBuffer();
-        BufferedReader br = new BufferedReader(new FileReader(PathUtil.pathGet("ARecordofaMortal'sJourneytoImmortality.txt")));
-        String s = br.readLine();
-        while(s != null){
-            sb.append(s);
-            s = br.readLine();
-        }
-        s = sb.toString();
+
+
         
         File file=new File(PathUtil.pathGet("ARecordofaMortal'sJourneytoImmortality.txt"));
 
-
-//        String pageString =file.getName().substring(file.getName().lastIndexOf(".") + 1,page.getName().length()).toLowerCase();
-        int pageNum = Integer.parseInt(s);
-
+        int pageNum = ReadPage.getPage();
 
         try {
             BufferedReader in=new BufferedReader(new FileReader(file));
