@@ -24,7 +24,7 @@ public class ReadBook {
 
 
         
-        File file=new File(PathUtil.pathGet("ARecordofaMortal'sJourneytoImmortality.txt"));
+        File file=new File(PathUtil.pathGet("YuanLeng.txt"));
 
         int pageNum = ReadPage.getPage();
 
